@@ -2,6 +2,7 @@
 *~
 .project
 .pydevproject
+manage.py
 
 /db
 .metadata/
