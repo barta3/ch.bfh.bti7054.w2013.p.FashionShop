@@ -1,2 +1,7 @@
-/db
 *.pyc
+*~
+.project
+.pydevproject
+
+/db
+.metadata/
