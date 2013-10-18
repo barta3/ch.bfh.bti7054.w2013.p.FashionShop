@@ -1,9 +1,0 @@
-{% if user_list %}
-    <ul>
-    {% for user in user_list %}
-        <li><a href="/users/{{ user.id }}/">{{ user.firstName }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No users.</p>
-{% endif %}
