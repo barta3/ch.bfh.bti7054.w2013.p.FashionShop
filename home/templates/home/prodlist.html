@@ -3,7 +3,7 @@
 	{% if prod_list %}
     	<ul>
     	{% for prod in prod_list %}
-        	<li>{{ prod.name }}</a></li>
+        	<li>{{ prod.name }} <a href="{{ prod.id }}">Details</a></li>
     	{% endfor %}
     	</ul>
     {% else %}

@@ -8,6 +8,12 @@ p {
     padding: 10px;
 }
 
+h1 {
+	padding: 10px;
+}
+
+
+
 #wrapper {
     width: 100%;
     min-width: 1000px;
@@ -22,21 +28,16 @@ p {
     background: #FF6633;
 }
 
-#contentliquid {
-    float: left;
-    width: 100%;
-}
 
 #content {
+	float: left;
     background: #FFFFFF;
-    margin-left: 150px;
 }
 
 #leftcolumn {
     float: left;
     background: #0099FF;
     width: 150px;
-    margin-left: -100%;
 }
 
 #footer {
@@ -44,5 +45,7 @@ p {
     width: 100%;
     background: #33FF66;
     clear: both;
+    position:absolute;
+    bottom: 0;
 }
 
