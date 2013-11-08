@@ -10,6 +10,7 @@ class Product(models.Model):
     name = models.CharField(max_length=20)
     desc = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=5, decimal_places=2)
+    image = models.ImageField(upload_to='prod_images/', default='no_image.gif')
     category = models.ForeignKey(ProductCategory)
     
     def __unicode__(self):
