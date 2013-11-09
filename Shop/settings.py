@@ -37,6 +37,7 @@ LANGUAGE_CODE = 'en-us'
 
 LOCALE_PATHS = (
     '/home/adrian/Webproject/Shop/home/locale',
+    '/home/adrian/Webproject/Shop/userauth/locale',
 )
 
 SITE_ID = 1

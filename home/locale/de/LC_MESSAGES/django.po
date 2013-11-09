@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-09 11:35+0100\n"
+"POT-Creation-Date: 2013-11-09 20:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/home/index.html:10
+#: templates/home/index.html:11
 msgid "Fashion Shop"
 msgstr ""
 
-#: templates/home/index.html:52
+#: templates/home/index.html:32
+msgid "Home"
+msgstr ""
+
+#: templates/home/index.html:54
 msgid "Welcome"
 msgstr "Wilkommen"
