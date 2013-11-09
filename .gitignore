@@ -1,5 +1,6 @@
 *.pyc
 *~
+*.mo
 .project
 .pydevproject
 manage.py
