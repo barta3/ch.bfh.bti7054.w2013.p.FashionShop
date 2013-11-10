@@ -24,8 +24,8 @@ msgstr ""
 
 #: templates/home/index.html:32
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: templates/home/index.html:54
 msgid "Welcome"
-msgstr "Wilkommen"
+msgstr "Willkommen"

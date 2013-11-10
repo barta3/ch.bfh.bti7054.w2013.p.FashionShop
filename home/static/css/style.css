@@ -13,37 +13,96 @@ h1 {
 }
 
 
+a:link {
+	color:#F7D683;
+	text-decoration:none;
+}
+
+a:visited {
+	color:#F7D683;
+}
+
+a:hover {
+	color:#FFFDC0;
+}
 
 #wrapper {
-    width: 100%;
-    min-width: 1000px;
-    max-width: 2000px;
-    margin: 0 auto;
+	width: 750px;
+	min-width: 750px;
+	margin: 0 auto;
 }
 
 #header {
-    float: left;
     height: 75px;
-    width: 100%;
-    background: #FF6633;
+    background: #FFFFFF;
+    background-image: url(../images/logo.png);
+    background-repeat:no-repeat;
+    cursor:pointer
 }
+
+#topmenu {
+	background: #457D97;
+	width: 750px;
+	height:20px;
+}
+
+#usermenu {
+	float:right;
+	background: #457D97;
+	padding: 0 10px;
+}
+
 
 
 #content {
-	float: left;
-    background: #FFFFFF;
+	float: right;
+	width: 620px;
+	margin: 0;
+	height: 100%;
+	padding: 10px 0;
 }
 
 #leftcolumn {
-    float: left;
-    background: #0099FF;
-    width: 150px;
+	float: left;
+	margin: 0;
+	width: 750px
+	position: relative;
 }
+
+
+#leftcolumn ul {
+ 	list-style-type: none; 
+	color: #FFFDC0;
+    margin: 0;
+	padding: 0;
+}
+
+ #leftcolumn li { 
+ 	margin: 0 0 1px 0; 
+ }
+
+#leftcolumn a {
+	display: block;
+	background-color: #457D97;
+	color: #F7D683;
+	width: 100px;
+	padding: 3px 10px;
+}
+
+#leftcolumn a:hover {
+	background-color: #CCB24C;
+	color: #000;
+}
+
+#prodListItem {
+	background-color: #FFFDC0;
+}
+
 
 #footer {
     height: 40px;
-    width: 100%;
-    background: #33FF66;
+    width: 750px;
+    background: #F7D683;
     clear: both;
     position:absolute;
     bottom: 0;

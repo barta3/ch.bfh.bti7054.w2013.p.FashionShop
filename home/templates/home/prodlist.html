@@ -1,11 +1,15 @@
 {% extends "home/index.html" %}
 {% block content %}
 	{% if prod_list %}
-    	<ul>
+    	
     	{% for prod in prod_list %}
-        	<li>{{ prod.name }} <a href="{{ prod.id }}">Details</a></li>
+    	<div id="prodListItem">
+        	{{ prod.name }} 
+        	<img src="/{{ prod.image.url }}" height="100"/>
+        	<a href="{{ prod.id }}">Details</a>
+        </div>
     	{% endfor %}
-    	</ul>
+    	
     {% else %}
     	<p>No products in this category</p>
     {% endif %}
