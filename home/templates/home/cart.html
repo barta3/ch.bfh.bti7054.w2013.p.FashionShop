@@ -1,12 +1,15 @@
 {% load i18n %}
 
 {% block content %}
-	<p>Shopping Cart</p>
-	
-	    {% for prod in cartItems%}
-        	{{ prod.name }}<br> 
-    	{% endfor %}
+		{% if cartItems %}
+		<p>Shopping Cart</p>
+	    	{% for prod in cartItems%}
+        		{{ prod.name }}<br> 
+    		{% endfor %}
+		<a href = "/home/checkout">Checkout<a/>    	
+    	{% else %}
+    	Shopping cart empty
+    	{% endif %}
     	
-<a href = "/home/checkout">Checkout<a/>    	
 
 {% endblock %}
