@@ -65,8 +65,7 @@ a:hover {
 #leftcolumn {
 	float: left;
 	margin: 0;
-	width: 750px
-	position: relative;
+	position:relative;
 }
 
 
@@ -96,6 +95,11 @@ a:hover {
 
 #prodListItem {
 	background-color: #FFFDC0;
+}
+
+#shoppingCart {
+	background-color: green;
+	margin-top: 20px;
 }
 
 

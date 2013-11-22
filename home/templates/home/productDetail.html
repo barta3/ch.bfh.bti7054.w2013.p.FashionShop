@@ -1,8 +1,16 @@
 {% extends "home/index.html" %}
+{% load i18n %}
+
 {% block content %}
 	<h1> {{ prod.name }} </h1>
 	<img src="/{{ prod.image.url }}"/>
 	<p> Details: {{ prod.desc }} </p>
-	<p> Price: {{ prod.price }}
-	<a href="/">Add to cart</a> </p>
+	<p> Price: {{ prod.price }} </p>
+	
+	<form action = "addToCart/" method="post" accept-charset="utf-8">
+	{{ form.as_p }}
+	{%csrf_token %}
+	<input type="submit" value="{% trans "Add to cart" %}"/>
+	</form>
+
 {% endblock %}

@@ -1,12 +1,14 @@
 from django.db import models
+from django.db.models.base import Model
+from django.contrib.auth.models import User
 
-class ProductCategory(models.Model):
+class ProductCategory(Model):
     name = models.CharField(max_length=20)
     
     def __unicode__(self):
         return self.name
 
-class Product(models.Model):
+class Product(Model):
     name = models.CharField(max_length=20)
     desc = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=5, decimal_places=2)
@@ -15,3 +17,10 @@ class Product(models.Model):
     
     def __unicode__(self):
         return self.name
+    
+class ShoppingCart(Model):    
+    products = models.ManyToManyField(Product)
+    user = models.OneToOneField(User)
+    
+    def __unicode__(self):
+        return "Cart of user " + str(self.user.id)

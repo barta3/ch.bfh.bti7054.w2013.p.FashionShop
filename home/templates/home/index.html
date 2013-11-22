@@ -47,7 +47,16 @@
     			<p>No categories</p>
 			{% endif %}
         {% endblock %}
+        
+       	<div id="shoppingCart">
+        	{% block shoppingCart %}
+        		{% include "home/cart.html" %}
+    		{% endblock %}
         </div>
+
+        </div>
+        
+
         
         <div id="content">
         {% block content %}
