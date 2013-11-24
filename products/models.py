@@ -1,6 +1,5 @@
 from django.db import models
 from django.db.models.base import Model
-from django.contrib.auth.models import User
 
 class ProductCategory(Model):
     name = models.CharField(max_length=20)
@@ -18,9 +17,3 @@ class Product(Model):
     def __unicode__(self):
         return self.name
     
-class ShoppingCart(Model):    
-    products = models.ManyToManyField(Product)
-    user = models.OneToOneField(User)
-    
-    def __unicode__(self):
-        return "Cart of user " + str(self.user.id)

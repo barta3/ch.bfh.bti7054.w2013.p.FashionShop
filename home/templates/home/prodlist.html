@@ -4,7 +4,7 @@
     	
     	{% for prod in prod_list %}
     	<div id="prodListItem">
-        	{{ prod.name }} 
+        	<a href="{{ prod.id }}">{{ prod.name }} </a><br>
         	<img src="/{{ prod.image.url }}" height="100"/>
         	<a href="{{ prod.id }}">Details</a>
         </div>

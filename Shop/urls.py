@@ -22,4 +22,5 @@ urlpatterns = patterns('',
 urlpatterns += i18n_patterns('',
     url(r'home/', include('home.urls')),
     url(r'^users/', include('userauth.urls')),
+    url(r'checkout/', include('checkout.urls')),
 )

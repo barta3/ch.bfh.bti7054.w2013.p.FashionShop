@@ -1,0 +1,27 @@
+{% extends "home/index.html" %}
+
+{% load i18n %}
+
+{% block shoppingCart %}
+{% endblock %}
+
+{% block content %}
+		{% if cartItems %}
+		<p>Shopping Cart Overview</p>
+	    	{% for prod in cartItems%}
+        		<div id ="prodListItem">
+        			<a>{{ prod.name }}</a>
+        			<a>Price: {{ prod.price }} </a>
+        		</div>
+    		{% endfor %}
+    		
+    <form action = "confirm/" method="post" accept-charset="utf-8">
+	{%csrf_token %}
+	<input type="submit" value="{% trans "Confirm Order" %}"/>
+	</form>
+    	{% else %}
+    	Shopping cart empty
+    	{% endif %}
+    	
+
+{% endblock %}

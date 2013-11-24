@@ -95,6 +95,12 @@ a:hover {
 
 #prodListItem {
 	background-color: #FFFDC0;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+#prodListItem a {
+	color: #333;
 }
 
 #shoppingCart {
