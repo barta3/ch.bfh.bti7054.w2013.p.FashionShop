@@ -12,5 +12,5 @@ def overview(request):
 def _addCartInfos(context, request):
     cart = ShoppingCart.objects.filter(user=request.user.id)
     if(cart.count() > 0):
-        cartItems = ShoppingCart.objects.filter(user=request.user.id)[0].products.all()
+        cartItems = ShoppingCart.objects.filter(user=request.user.id)[0].orders.all()
         context['cartItems'] = cartItems

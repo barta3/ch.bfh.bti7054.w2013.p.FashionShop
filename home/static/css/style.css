@@ -107,14 +107,3 @@ a:hover {
 	background-color: green;
 	margin-top: 20px;
 }
-
-
-#footer {
-    height: 40px;
-    width: 750px;
-    background: #F7D683;
-    clear: both;
-    position:absolute;
-    bottom: 0;
-}
-

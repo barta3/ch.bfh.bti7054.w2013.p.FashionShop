@@ -2,7 +2,7 @@ from django.shortcuts import render
 from products.models import ProductCategory, Product
 from django.http.response import HttpResponseRedirect
 from checkout.views import _addCartInfos
-from checkout.models import ShoppingCart
+from checkout.models import ShoppingCart, Order, OrderForm
 
 def index(request):
     context = { }
@@ -14,7 +14,6 @@ def index(request):
 
 def productListByCategory(request, cat_name):
     prod_list = Product.objects.filter(category__name=cat_name)
-#     cat_list = ProductCategory.objects.all()
     context = {'prod_list' : prod_list}
     
     addCategories(context)
@@ -23,16 +22,30 @@ def productListByCategory(request, cat_name):
     return render(request, 'home/prodlist.html', context)
 
 def productDetail(request, cat_name, prod_id):
-    context = {'prod' : Product.objects.get(id=prod_id)}
-    addCategories(context)
-    _addCartInfos(context, request)
+    context = { }
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            _addToCart(request, cat_name, prod_id, form.cleaned_data['size'])
+            return HttpResponseRedirect('/home/')
+    else:
+        form = OrderForm()
+        context ['prod'] = Product.objects.get(id=prod_id)
+        addCategories(context)
+        _addCartInfos(context, request)
+        context['sizes'] = dict((x, y,) for x, y in Order.SIZE_CHOICES)
+    context['form'] = form
     return render(request, 'home/productDetail.html', context)
 
-def addToCart(request, cat_name, prod_id):
+def _addToCart(request, cat_name, prod_id, size):
     
     cartByUser = ShoppingCart.objects.get_or_create(user=request.user)[0]
     
-    cartByUser.products.add(Product.objects.get(id=prod_id))
+    order = Order.objects.create(product=Product.objects.get(id=prod_id))
+    order.size = size
+    order.save()
+    
+    cartByUser.orders.add(order)
     
     return HttpResponseRedirect('/home/')
     

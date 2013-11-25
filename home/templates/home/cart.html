@@ -3,10 +3,11 @@
 {% block content %}
 		{% if cartItems %}
 		<p>Shopping Cart</p>
-	    	{% for prod in cartItems%}
-        		{{ prod.name }}<br> 
+	    	{% for order in cartItems%}
+        		{{ order.product.name }}
+        		{{ order.size }}<br> 
     		{% endfor %}
-		<a href = "/checkout">Checkout<a/>    	
+		<a href = "/checkout">Checkout</a>    	
     	{% else %}
     	Shopping cart empty
     	{% endif %}

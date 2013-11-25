@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'products',
     'userauth',
     'checkout',
+    'south',
 )
 
 LOGIN_URL = '/users/login/'

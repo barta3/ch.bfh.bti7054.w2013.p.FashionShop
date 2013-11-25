@@ -8,10 +8,11 @@
 {% block content %}
 		{% if cartItems %}
 		<p>Shopping Cart Overview</p>
-	    	{% for prod in cartItems%}
+	    	{% for order in cartItems%}
         		<div id ="prodListItem">
-        			<a>{{ prod.name }}</a>
-        			<a>Price: {{ prod.price }} </a>
+        			<a>{{ order.product.name }}</a>
+        			<a>Size: {{ order.size }}</a>
+        			<a>Price: {{ order.product.price }} </a>
         		</div>
     		{% endfor %}
     		
