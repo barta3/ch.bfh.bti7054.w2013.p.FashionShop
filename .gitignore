@@ -8,3 +8,5 @@ manage.py
 /db
 .metadata/
 /media/prod_images
+/products/migrations
+/checkout/migrations
