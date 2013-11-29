@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from checkout.models import ShoppingCart
+from checkout.models import ShoppingCart, STATE_NEW
 import home
 
 def overview(request):
@@ -10,7 +10,17 @@ def overview(request):
 
 
 def _addCartInfos(context, request):
-    cart = ShoppingCart.objects.filter(user=request.user.id)
+    cart = ShoppingCart.objects.filter(user=request.user.id, state=STATE_NEW)
     if(cart.count() > 0):
-        cartItems = ShoppingCart.objects.filter(user=request.user.id)[0].orders.all()
+        cartItems = cart[0].orders.all()
         context['cartItems'] = cartItems
+        
+def confirmation(request):
+    context = { }
+    home.views.addCategories(context)
+    
+    cart = ShoppingCart.objects.filter(user=request.user.id, state=STATE_NEW)[0]
+    cart.close()
+    cart.save()
+    
+    return render(request, 'checkout/thanks.html', context)

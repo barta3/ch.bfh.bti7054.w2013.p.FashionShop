@@ -2,7 +2,7 @@ from django.shortcuts import render
 from products.models import ProductCategory, Product
 from django.http.response import HttpResponseRedirect
 from checkout.views import _addCartInfos
-from checkout.models import ShoppingCart, Order, OrderForm
+from checkout.models import ShoppingCart, Order, OrderForm, STATE_NEW
 
 def index(request):
     context = { }
@@ -33,13 +33,13 @@ def productDetail(request, cat_name, prod_id):
         context ['prod'] = Product.objects.get(id=prod_id)
         addCategories(context)
         _addCartInfos(context, request)
-        context['sizes'] = dict((x, y,) for x, y in Order.SIZE_CHOICES)
+        
     context['form'] = form
     return render(request, 'home/productDetail.html', context)
 
 def _addToCart(request, cat_name, prod_id, size):
     
-    cartByUser = ShoppingCart.objects.get_or_create(user=request.user)[0]
+    cartByUser = ShoppingCart.objects.get_or_create(user=request.user, state=STATE_NEW)[0]
     
     order = Order.objects.create(product=Product.objects.get(id=prod_id))
     order.size = size
