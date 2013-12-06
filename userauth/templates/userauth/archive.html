@@ -1,0 +1,31 @@
+{% extends "home/index.html" %}
+
+
+{% block shoppingCart %}
+{% endblock %}
+
+{% block content %}
+		{% if cartItems %}
+		<p>My Archive</p>
+	    	{% for cart in cartItems%}
+        		<div id ="prodListItem">
+        			<a>Purchse on on: {{ cart.closingdate }}</a>
+        			Total: {{ cart.total }}
+        		</div>
+       
+        		{% for order in cart.orders.all %}
+       			<div id="subListItem">
+        			<a>{{ order.product.name }}</a>
+        			<a>Size: {{ order.size }}</a>
+        			<a>Price: {{ order.product.price }} </a>
+        		</div>
+       			{% endfor %}
+        		<br>
+        			
+    		{% endfor %}
+    	{% else %}
+    	Nothing to show here
+    	{% endif %}
+    	
+
+{% endblock %}

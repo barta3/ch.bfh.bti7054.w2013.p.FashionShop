@@ -4,6 +4,7 @@
     {% trans "Hello" %} {{ user.username }}!
     <a href="{% url "userauth_password_change" %}">{%trans "Change Password" %}</a>
     <a href="{% url "userauth_logout" %}">Logout</a>
+    <a href ="/users/archive">Archive</a>
 {% else %}
     <a href="{% url "userauth_login" %}">Login</a>
     <a href="{% url "userauth_register" %}">{% trans "Register" %}</a>

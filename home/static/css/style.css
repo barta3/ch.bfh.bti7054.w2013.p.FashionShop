@@ -103,6 +103,11 @@ a:hover {
 	color: #333;
 }
 
+#subListItem a {
+	padding-left: 10px;
+	color: #457D97;
+}
+
 #shoppingCart {
 	background-color: green;
 	margin-top: 20px;

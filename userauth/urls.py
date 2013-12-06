@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
+from userauth import views
 
 urlpatterns = patterns('django.contrib.auth.views',
     url(r'^login/$', 'login', {'template_name': 'userauth/login.html'},
@@ -11,7 +12,8 @@ urlpatterns = patterns('django.contrib.auth.views',
         name='userauth_password_change'),
     url(r'^password_change_done/$', 'password_change_done',
         {'template_name': 'userauth/password_change_done.html'},
-        name='userauth_password_change_done')
+        name='userauth_password_change_done'),
+    url(r'^archive/$', views.archive),
 )
 urlpatterns += patterns('',
     url(r'^registrieren/$', 'userauth.views.register',
