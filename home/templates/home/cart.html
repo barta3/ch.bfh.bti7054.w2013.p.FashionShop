@@ -2,14 +2,17 @@
 
 {% block content %}
 		{% if cartItems %}
-		<p>Shopping Cart</p>
+		<h4>Shopping Cart</h4>
+		<ul>
 	    	{% for order in cartItems%}
-        		{{ order.product.name }}
-        		{{ order.size }}<br> 
+        	<li>{{ order.product.name }}
+        		{{ order.size }}
+        	</li> 
     		{% endfor %}
+    	</ul>
 		<a href = "/checkout">Checkout</a>    	
     	{% else %}
-    	Shopping cart empty
+    	<a>Shopping cart empty</a>
     	{% endif %}
     	
 

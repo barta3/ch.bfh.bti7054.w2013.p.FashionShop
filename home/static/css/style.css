@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 13px;
-    color:#333
+    color:#333;
 }
 
 p {
@@ -30,6 +30,9 @@ a:hover {
 	width: 750px;
 	min-width: 750px;
 	margin: 0 auto;
+	border: 2px solid #457D97;
+    height:100%;
+	overflow: hidden;
 }
 
 #header {
@@ -60,6 +63,8 @@ a:hover {
 	margin: 0;
 	height: 100%;
 	padding: 10px 0;
+	overflow: hidden;
+	min-height: 100%;
 }
 
 #leftcolumn {
@@ -109,6 +114,37 @@ a:hover {
 }
 
 #shoppingCart {
-	background-color: green;
+	background-color: #CCB24C;
 	margin-top: 20px;
 }
+
+#shoppingCart h4 {
+	padding-left: 10px;
+	margin:0;
+	font-size: 15px;
+}
+#shoppingCart a  {
+	color: #FFFDC0;
+	padding-left: 10px;
+}
+
+#shoppingCart a:link {
+	text-decoration: underline;
+}
+
+#shoppingCart a:hover {
+	background-color: #457D97;
+	color: #FFFDC0;
+}
+
+#shoppingCart ul {
+ 	list-style-type: none; 
+	color: #333;
+    margin: 0;
+	padding: 0;
+	padding-left: 10px;
+}
+
+ #shoppingCart li { 
+ 	margin: 0 0 1px 0; 
+ }
