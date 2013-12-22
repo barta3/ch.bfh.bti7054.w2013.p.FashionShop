@@ -67,8 +67,6 @@ a:hover {
 	padding: 0 10px;
 }
 
-
-
 #content {
 	float: right;
 	width: 620px;
@@ -138,10 +136,8 @@ a:hover {
 #shoppingCart a  {
 	color: #FFFDC0;
 	padding-left: 10px;
-}
-
-#shoppingCart a:link {
-	text-decoration: underline;
+		background-color: #333;
+	
 }
 
 #shoppingCart a:hover {
