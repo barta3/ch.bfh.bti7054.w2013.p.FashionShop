@@ -12,6 +12,18 @@ h1 {
 	padding: 10px;
 }
 
+label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 140px;
+    text-align: right;
+}
+input {
+  display: block;
+  float: left;
+  
+}
 
 a:link {
 	color:#F7D683;
@@ -148,3 +160,18 @@ a:hover {
  #shoppingCart li { 
  	margin: 0 0 1px 0; 
  }
+ 
+.errorlist {
+    display: inline-block;
+    float: left;
+    clear: left;
+    background-color: red;
+}
+.helptext {
+	display: compact;
+	float:left;
+}
+
+.formButton {
+	clear: left;
+}
