@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from products.models import ProductCategory, Product
-from django.http.response import HttpResponseRedirect
+from django.http.response import HttpResponseRedirect, HttpResponse
 from checkout.views import _addCartInfos
 from checkout.models import ShoppingCart, Order, OrderForm, STATE_NEW
+import json
+from django.db.models.query_utils import Q
 
 def index(request):
     context = { }
@@ -53,4 +55,22 @@ def _addToCart(request, cat_name, prod_id, size):
 def addCategories(context):
     cat_list = ProductCategory.objects.all()
     context['cat_list'] = cat_list
+    
+def search_prods(request):
+    if request.is_ajax():
+        q = request.GET.get('term', '')
+        prods = Product.objects.filter(Q(name__icontains = q) |Q(desc__icontains = q))[:20]
+        results = []
+        for prod in prods:
+            prod_json = {}
+            prod_json['id'] = prod.id
+            prod_json['label'] = prod.name
+            prod_json['cat'] = prod.category.name
+            results.append(prod_json)
+        data = json.dumps(results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data, mimetype)
+
 

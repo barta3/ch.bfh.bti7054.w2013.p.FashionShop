@@ -52,7 +52,10 @@ a:hover {
     background: #FFFFFF;
     background-image: url(../images/logo.png);
     background-repeat:no-repeat;
-    cursor:pointer
+}
+
+#searchField {
+	float: right;
 }
 
 #topmenu {
