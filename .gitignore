@@ -10,3 +10,4 @@ manage.py
 /media/prod_images
 /products/migrations
 /checkout/migrations
+userauth/migrations

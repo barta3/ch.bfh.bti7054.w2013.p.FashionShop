@@ -6,6 +6,7 @@ from products.models import Product
 from django.forms.models import ModelForm
 from django.utils.datetime_safe import date
 from django.db.models.aggregates import Sum
+from django.conf import settings
 
 STATE_NEW = 1
 STATE_ARCHIVE = 2
@@ -31,7 +32,7 @@ class OrderForm(ModelForm):
 class ShoppingCart(Model):
  
     orders = models.ManyToManyField(Order)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
     
     ORDER_STATES = (
                     (STATE_NEW, 'New'),

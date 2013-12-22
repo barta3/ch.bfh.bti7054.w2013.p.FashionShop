@@ -40,11 +40,11 @@ def productDetail(request, cat_name, prod_id):
 def _addToCart(request, cat_name, prod_id, size):
     
     cartByUser = ShoppingCart.objects.get_or_create(user=request.user, state=STATE_NEW)[0]
-    
+     
     order = Order.objects.create(product=Product.objects.get(id=prod_id))
     order.size = size
     order.save()
-    
+     
     cartByUser.orders.add(order)
     
     return HttpResponseRedirect('/home/')
