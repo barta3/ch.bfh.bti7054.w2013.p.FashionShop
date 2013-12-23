@@ -127,9 +127,22 @@ a:hover {
 	color: #333;
 }
 
+#archiveListItem {
+	background-color: #CCB24C;
+	margin-bottom: 5px;
+	padding: 5px;
+	font-weight: bold;
+	margin-right: 10px;
+}
 #subListItem a {
 	padding-left: 10px;
 	color: #457D97;
+	margin-right: 15px;
+}
+
+#subListItemName {
+	float: left; 
+	width: 200px;
 }
 
 #shoppingCart {
@@ -179,4 +192,8 @@ a:hover {
 
 .formButton {
 	clear: left;
+}
+
+.right {
+	float: right;
 }

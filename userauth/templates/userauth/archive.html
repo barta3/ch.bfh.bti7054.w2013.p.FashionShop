@@ -1,5 +1,7 @@
 {% extends "home/index.html" %}
 {% load i18n %}
+{% load humanize %}
+
 
 {% block breadcrumbs %}
     {{ block.super }} » <a href="{% url 'userauth.views.archive' %}">{% trans "Archive" %}</a>
@@ -9,19 +11,20 @@
 {% endblock %}
 
 {% block content %}
+</script>
 		{% if cartItems %}
-		<p>My Archive</p>
+		<h2>My Archive</h2>
 	    	{% for cart in cartItems%}
-        		<div id ="prodListItem">
-        			<a>Purchse on: {{ cart.closingdate }}</a>
-        			Total: {{ cart.total }}
+        		<div id ="archiveListItem">
+        			Purchse on: {{ cart.closingdate }}
+        			<a class ="right">Total: CHF {{ cart.total|floatformat:2 }}</a>
         		</div>
        
         		{% for order in cart.orders.all %}
        			<div id="subListItem">
-        			<a>{{ order.product.name }}</a>
-        			<a>Size: {{ order.size }}</a>
-        			<a>Price: {{ order.product.price }} </a>
+        			<span id="subListItemName">{{ order.product.name }}</span>
+        			<a> Size: {{ order.size }}</a>
+        			<a class ="right">CHF {{ order.product.price|floatformat:2}} </a>
         		</div>
        			{% endfor %}
         		<br>

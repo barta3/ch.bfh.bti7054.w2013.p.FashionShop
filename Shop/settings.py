@@ -137,6 +137,7 @@ INSTALLED_APPS = (
     'userauth',
     'checkout',
     'south',
+    'django.contrib.humanize',
 )
 
 LOGIN_URL = '/users/login/'
