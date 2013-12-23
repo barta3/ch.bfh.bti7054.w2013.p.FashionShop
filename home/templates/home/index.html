@@ -26,6 +26,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div id="wrapper">
+    
         <div id="header">
         	<div id="searchField" class="ui-widget">
   				<label for="search">Search: </label>
@@ -34,6 +35,9 @@
         </div>
         
         <div id="topmenu">
+        <div id="breadcrumb">
+        {% block breadcrumbs %}<a href="/home/">Home</a>{% endblock %}
+        </div>
         <div id="usermenu">
         
                 {% block toggle_login %}

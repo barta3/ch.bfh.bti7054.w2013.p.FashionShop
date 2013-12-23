@@ -70,6 +70,12 @@ a:hover {
 	padding: 0 10px;
 }
 
+#breadcrumb {
+	float: left;
+	color: #FFFDC0;
+	padding-left: 5px;
+}
+
 #content {
 	float: right;
 	width: 620px;
@@ -95,7 +101,7 @@ a:hover {
 }
 
  #leftcolumn li { 
- 	margin: 0 0 1px 0; 
+ 	margin: 1px 0 0 0; 
  }
 
 #leftcolumn a {

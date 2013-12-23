@@ -1,5 +1,9 @@
 {% extends "home/index.html" %}
+{% load i18n %}
 
+{% block breadcrumbs %}
+    {{ block.super }} » <a href="{% url 'userauth.views.archive' %}">{% trans "Archive" %}</a>
+{% endblock %}
 
 {% block shoppingCart %}
 {% endblock %}

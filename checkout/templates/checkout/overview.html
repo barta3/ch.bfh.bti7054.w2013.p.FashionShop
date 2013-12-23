@@ -2,6 +2,10 @@
 
 {% load i18n %}
 
+{% block breadcrumbs %}
+    {{ block.super }} » <a href="{% url 'checkout.views.overview' %}">{% trans "Checkout" %}</a>
+{% endblock %}
+
 {% block shoppingCart %}
 {% endblock %}
 

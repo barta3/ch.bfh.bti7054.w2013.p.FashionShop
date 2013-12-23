@@ -1,6 +1,12 @@
 {% extends "home/index.html" %}
 {% load i18n %}
 
+{% block breadcrumbs %}
+    {{ block.super }} »
+    <a href="{% url 'home.views.productListByCategory' cat_name %}">{{ cat_name }}</a> »
+    <a>{{ title }}</a>
+{% endblock %}
+
 {% block content %}
 	<h1> {{ prod.name }} </h1>
 	<img src="/{{ prod.image.url }}" height="400"/>

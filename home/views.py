@@ -20,6 +20,7 @@ def productListByCategory(request, cat_name):
     
     addCategories(context)
     _addCartInfos(context, request)
+    context['title'] = cat_name
 
     return render(request, 'home/prodlist.html', context)
 
@@ -35,8 +36,10 @@ def productDetail(request, cat_name, prod_id):
         context ['prod'] = Product.objects.get(id=prod_id)
         addCategories(context)
         _addCartInfos(context, request)
+        context['title'] =  Product.objects.get(id=prod_id).name
         
     context['form'] = form
+    context['cat_name'] = cat_name
     return render(request, 'home/productDetail.html', context)
 
 def _addToCart(request, cat_name, prod_id, size):

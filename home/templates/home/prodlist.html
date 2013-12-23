@@ -1,4 +1,9 @@
 {% extends "home/index.html" %}
+
+{% block breadcrumbs %}
+    {{ block.super }} » <a href="{% url 'home.views.productListByCategory' title %}">{{ title }}</a>
+{% endblock %}
+
 {% block content %}
 	{% if prod_list %}
     	
