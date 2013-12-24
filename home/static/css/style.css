@@ -118,11 +118,27 @@ a:hover {
 	background-color: #CCB24C;
 	color: #000;
 }
+#showCaseItem {
+	width: 280px;
+	color: #333;
+	float: left;
+	padding: 5px;
+	margin: 5px;
+	background-color: #F7D683;
+}
+
+#showCaseItem img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #prodListItem {
-	background-color: #FFFDC0;
+	background-color: #F7D683;
 	margin-bottom: 5px;
 	padding: 5px;
+	margin-right: 10px;
+	color: #333;
 }
 
 #prodListItem a {

@@ -10,6 +10,8 @@ def index(request):
     context = { }
     addCategories(context)
     _addCartInfos(context, request)
+    
+    context['showCase'] = Product.objects.filter(showcase=True)
         
     return render(request, 'home/index.html', context)
 

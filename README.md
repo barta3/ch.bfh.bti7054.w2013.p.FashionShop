@@ -3,7 +3,6 @@ ch.bfh.bti7054.w2013.p.FashionShop
 Webshop basierend auf Django 1.5
 
 ## TODO:
-* Special offers on Startpage
 * Different product options
 * Shipping method options etc.
 * Confirmation Mail
@@ -20,4 +19,5 @@ Webshop basierend auf Django 1.5
 * More User attributes
 * AJAX Search Field
 * Breadcrumb
+* Showcase on Startpage
 
