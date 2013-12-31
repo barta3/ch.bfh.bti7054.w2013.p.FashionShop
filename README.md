@@ -10,7 +10,6 @@ ch.bfh.bti7054.w2013.p.FashionShop
 
 
 ## TODO:
-* Confirmation Mail
 * Different product options
 * Web service integration
 
@@ -25,4 +24,5 @@ ch.bfh.bti7054.w2013.p.FashionShop
 * AJAX Search Field
 * Breadcrumb
 * Showcase on Startpage
-
+* Send Confirmation Mail
+* Internationalization and localization

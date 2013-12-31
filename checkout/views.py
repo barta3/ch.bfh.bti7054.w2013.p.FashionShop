@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from checkout.models import ShoppingCart, STATE_NEW
+from django.core.mail import send_mail
 import home
 
 def overview(request):
@@ -22,5 +23,14 @@ def confirmation(request):
     cart = ShoppingCart.objects.filter(user=request.user.id, state=STATE_NEW)[0]
     cart.close()
     cart.save()
+    
+    receipient = request.user.email
+    
+    msg = """
+    Dear {0}, Thank you for your order.
+    Total price: {1}
+    Regards, Fahion Shop team""".format(request.user.first_name, cart.total())
+    
+    send_mail('Order Confirmation', msg, "info@fashioshop.com", [receipient], False)
     
     return render(request, 'checkout/thanks.html', context)
