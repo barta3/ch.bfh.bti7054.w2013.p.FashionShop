@@ -10,11 +10,9 @@ ch.bfh.bti7054.w2013.p.FashionShop
 
 
 ## TODO:
-* Different product options
-* Shipping method options etc.
 * Confirmation Mail
+* Different product options
 * Web service integration
-* ev. PDF Generator
 
 ## Done
 * User Registration
