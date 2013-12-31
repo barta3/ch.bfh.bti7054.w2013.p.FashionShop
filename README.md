@@ -1,11 +1,11 @@
 ch.bfh.bti7054.w2013.p.FashionShop
 ==================================
-Webshop basierend auf Django 1.5
 
 ## Used Tools and Technology
 * Python 2.7 http://www.python.org/
 * Django 1.5 https://www.djangoproject.com/
     * South for Database migrations http://south.aeracode.org/
+* JQuery 1.10 (for Autocomplete Search)
 * SQLite Database engine http://www.sqlite.org/
 
 
