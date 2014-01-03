@@ -13,9 +13,13 @@
 	<p> Details: {{ prod.desc }} </p>
 	<p> Price: {{ prod.price }} </p>
 	{% if user.is_authenticated %}
-		<form action = "addToCart/" method="post" accept-charset="utf-8">
-		{{ form.as_p }}
-		{%csrf_token %}
+		<form action="addToCart/" method="post" accept-charset="utf-8">
+		{% csrf_token %}
+		    {% for field in form %}
+			<p>
+	           	{{ field.label }} {{ field }}
+   	    	</p>
+    		{% endfor %}
 		<input type="submit" value="{% trans "Add to cart" %}"/>
 		</form>
 	{% else %}
