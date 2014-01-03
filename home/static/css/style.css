@@ -215,3 +215,7 @@ a:hover {
 .right {
 	float: right;
 }
+
+.currency {
+	font-weight: bold;
+}

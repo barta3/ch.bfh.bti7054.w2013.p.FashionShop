@@ -6,6 +6,7 @@ ch.bfh.bti7054.w2013.p.FashionShop
 * Django 1.5 https://www.djangoproject.com/
     * South for Database migrations http://south.aeracode.org/
 * JQuery 1.10 (for Autocomplete Search)
+    *  jQuery Currency https://github.com/gilbitron/jQuery-Currency
 * SQLite Database engine http://www.sqlite.org/
 
 

@@ -16,7 +16,7 @@
         		<div id ="prodListItem">
         			<a>{{ order.product.name }}</a>
         			<a>Size: {{ order.size }}</a>
-        			<a>Price: {{ order.product.price }} </a>
+        			<a>Price: <span class="currency">{{ order.product.price }} </span></a>
         		</div>
     		{% endfor %}
     		

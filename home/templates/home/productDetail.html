@@ -11,7 +11,7 @@
 	<h1> {{ prod.name }} </h1>
 	<img src="/{{ prod.image.url }}" height="400"/>
 	<p> Details: {{ prod.desc }} </p>
-	<p> Price: {{ prod.price }} </p>
+	<p> Price: <span class="currency">{{ prod.price }} </span></p>
 	{% if user.is_authenticated %}
 		<form action="addToCart/" method="post" accept-charset="utf-8">
 		{% csrf_token %}
