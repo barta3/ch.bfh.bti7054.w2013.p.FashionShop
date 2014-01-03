@@ -26,10 +26,10 @@ def confirmation(request):
     
     receipient = request.user.email
     
-    msg = """
+    msg = _("""
     Dear {0}, Thank you for your order.
     Total price: {1}
-    Regards, Fahion Shop team""".format(request.user.first_name, cart.total())
+    Regards, Fahion Shop team""").format(request.user.first_name, cart.total())
     
     send_mail('Order Confirmation', msg, "info@fashioshop.com", [receipient], False)
     

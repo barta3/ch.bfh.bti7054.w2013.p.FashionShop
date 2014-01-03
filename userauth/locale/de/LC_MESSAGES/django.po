@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-09 20:48+0100\n"
+"POT-Creation-Date: 2014-01-03 17:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: templates/userauth/archive.html:7
+msgid "Archive"
+msgstr "Archiv"
+
 #: templates/userauth/password_change_done.html:4
 msgid "Password changed"
 msgstr "Passwort geändert"
 
 #: templates/userauth/password_change_done.html:7
-msgid "Your password has been changed."
+msgid "Your password has been changed ."
 msgstr "Passwort wurde geändert."
 
 #: templates/userauth/password_change_form.html:13
 msgid "Change password"
 msgstr "Passwort ändern"
 
-#: templates/userauth/register.html:9 templates/userauth/toggle_login.html:9
+#: templates/userauth/register.html:8 templates/userauth/toggle_login.html:10
 msgid "Register"
 msgstr "Registrieren"
+
+#: templates/userauth/register_done.html:5
+msgid "Registration successful."
+msgstr "Registrierung erfolgreich"
 
 #: templates/userauth/toggle_login.html:4
 msgid "Hello"
 msgstr "Hallo"
 
-#: templates/userauth/toggle_login.html:5
+#: templates/userauth/toggle_login.html:6
 msgid "Change Password"
 msgstr "Passwort ändern"

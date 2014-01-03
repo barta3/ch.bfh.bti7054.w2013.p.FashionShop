@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-03 17:44+0100\n"
+"POT-Creation-Date: 2014-01-03 17:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/home/index.html:11
-msgid "Fashion Shop"
-msgstr "Fashio Shop"
+#: views.py:29
+msgid ""
+"\n"
+"    Dear {0}, Thank you for your order.\n"
+"    Total price: {1}\n"
+"    Regards, Fahion Shop team"
+msgstr "\n"
+"    Hallo {0}, Vielen Dankf für ihre Bestellung.\n"
+"    Preis total: {1}\n"
+"    Grüsse, ihr Fahion Shop team"
 
-#: templates/home/productDetail.html:23
-msgid "Add to cart"
-msgstr "In den Warenkorb"
+#: templates/checkout/overview.html:6
+msgid "Checkout"
+msgstr "Zur Kasse"
 
-#: templates/home/productDetail.html:26
-msgid "Login to buy"
-msgstr "Zum Bestellen bitte einloggen"
-
-#~ msgid "Home"
-#~ msgstr "Home"
-
-#~ msgid "Welcome"
-#~ msgstr "Willkommen"
+#: templates/checkout/overview.html:25
+msgid "Confirm Order"
+msgstr "Bestellung bestätigen"
