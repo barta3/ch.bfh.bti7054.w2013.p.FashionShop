@@ -2,7 +2,7 @@
 
 {% if user.is_authenticated %}
     {% trans "Hello" %} {{ user.username }}!
-    <a href ="/users/archive">Archive</a> |
+    <a href ="/users/archive">{% trans "Archive" %}</a> |
     <a href="{% url "userauth_password_change" %}"> {%trans "Change Password" %}</a> |
     <a href="{% url "userauth_logout" %}">Logout</a>
 {% else %}

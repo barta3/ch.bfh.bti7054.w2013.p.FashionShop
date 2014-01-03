@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from checkout.models import ShoppingCart, STATE_NEW
 from django.core.mail import send_mail
+from django.utils.translation import ugettext as _
 import home
 
 def overview(request):
@@ -27,7 +28,7 @@ def confirmation(request):
     receipient = request.user.email
     
     msg = _("""
-    Dear {0}, Thank you for your order.
+    Hello {0}, Thank you for your order.
     Total price: {1}
     Regards, Fahion Shop team""").format(request.user.first_name, cart.total())
     

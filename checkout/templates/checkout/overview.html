@@ -15,8 +15,8 @@
 	    	{% for order in cartItems%}
         		<div id ="prodListItem">
         			<a>{{ order.product.name }}</a>
-        			<a>Size: {{ order.size }}</a>
-        			<a>Price: <span class="currency">{{ order.product.price }} </span></a>
+        			<a>{% trans "Size:" %} {{ order.size }}</a>
+        			<a>{% trans "Price:" %} <span class="currency">{{ order.product.price }} </span></a>
         		</div>
     		{% endfor %}
     		
@@ -25,7 +25,7 @@
 	<input type="submit" value="{% trans "Confirm Order" %}"/>
 	</form>
     	{% else %}
-    	Shopping cart empty
+    		{% trans "Shopping cart empty" %}
     	{% endif %}
     	
 

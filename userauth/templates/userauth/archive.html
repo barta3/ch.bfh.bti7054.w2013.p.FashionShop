@@ -15,14 +15,14 @@
 		<h2>My Archive</h2>
 	    	{% for cart in cartItems%}
         		<div id ="archiveListItem">
-        			Purchse on: {{ cart.closingdate }}
+        			{% trans "Purchse on:" %} {{ cart.closingdate }}
         			<a class ="right">Total: <span class="currency">{{ cart.total|floatformat:0 }}</span> </a>
         		</div>
        
         		{% for order in cart.orders.all %}
        			<div id="subListItem">
         			<span id="subListItemName">{{ order.product.name }}</span>
-        			<a> Size: {{ order.size }}</a>
+        			<a> {% trans "Size:" %} {{ order.size }}</a>
         			<a class ="right"> <span class="currency">{{ order.product.price }}</span> </a>
         		</div>
        			{% endfor %}
