@@ -145,6 +145,13 @@ a:hover {
 	color: #333;
 }
 
+#prodListItem img {
+	float:left; 
+	margin-right:10px; 
+	margin-bottom: 10px;
+	height: 100px;
+}
+
 #archiveListItem {
 	background-color: #CCB24C;
 	margin-bottom: 5px;
