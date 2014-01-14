@@ -9,10 +9,7 @@ ch.bfh.bti7054.w2013.p.FashionShop
     *  jQuery Currency https://github.com/gilbitron/jQuery-Currency
 * SQLite Database engine http://www.sqlite.org/
 
-
-## TODO:
-* Different product options
-* Web service integration
+[Installation](doc/Installation_manual.txt)
 
 ## Done
 * User Registration
