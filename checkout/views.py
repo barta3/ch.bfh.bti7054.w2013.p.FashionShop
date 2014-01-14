@@ -32,6 +32,7 @@ def confirmation(request):
     Total price: {1}
     Regards, Fahion Shop team""").format(request.user.first_name, cart.total())
     
-    send_mail('Order Confirmation', msg, "info@fashioshop.com", [receipient], False)
+    # Fail silently
+    send_mail('Order Confirmation', msg, "info@fashioshop.com", [receipient], True)
     
     return render(request, 'checkout/thanks.html', context)
