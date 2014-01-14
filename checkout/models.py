@@ -16,10 +16,12 @@ class Order(Model):
     SIZE_S = 'S'
     SIZE_M = 'M'
     SIZE_L = 'L'
+    SIZE_XL = 'XL'
     SIZE_CHOICES = (
         (SIZE_S, 'S'),
         (SIZE_M, 'M'),
         (SIZE_L, 'L'),
+        (SIZE_XL, 'XL'),
     )
     size = models.CharField(max_length=2, choices=SIZE_CHOICES, default=SIZE_S)
 
