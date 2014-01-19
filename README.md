@@ -11,6 +11,8 @@ ch.bfh.bti7054.w2013.p.FashionShop
 
 [Installation](doc/Installation_manual.md)
 
+[Presentation & Screencast of Demo](doc/)
+
 ## Done
 * User Registration
 * Login
